@@ -38,7 +38,7 @@ export class ProductionEnvironment {
   // TERRA_HIVE_ENDPOINT = "https://columbus-temp-hive-g7fhf.ondigitalocean.app/graphql";
 
   TERRA_LCD_ENDPOINT = "https://columbus-lcd.terra.dev/";
-  TERRA_HIVE_ENDPOINT = "https://hive.terrarebels.net/graphql";
+  TERRA_HIVE_ENDPOINT = process.env.TERRA_HIVE_ENDPOINT as string ?? "https://hive.terrarebels.net/graphql";
 
   // Maximum amount of blocks to collect during an indexer invocation
   CHAIN_COLLECT_BATCH_SIZE = 150;
