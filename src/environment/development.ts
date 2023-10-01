@@ -31,7 +31,7 @@ export class DevelopmentEnvironment {
   // Chain config
   TERRA_CHAIN_ID = "bombay-12";
   TERRA_LCD_ENDPOINT = "https://lcd-terra-test.everstake.one/";
-  TERRA_HIVE_ENDPOINT = "https://hive-terra-test.everstake.one/graphql";
+  TERRA_HIVE_ENDPOINT = process.env.TERRA_HIVE_ENDPOINT as string ?? "https://hive-terra-test.everstake.one/graphql";
   // Maximum amount of blocks to collect during an indexer invocation
   CHAIN_COLLECT_BATCH_SIZE = 150;
   // Whether to notify Slack when a fee swap happens
